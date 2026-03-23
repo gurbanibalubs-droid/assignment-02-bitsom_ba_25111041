@@ -1,0 +1,11 @@
+## Database Recommendation
+
+For a healthcare startup building a patient management system, I would recommend **MySQL** (or any ACID-compliant relational database) as the primary data store — with an important caveat for the fraud detection module.
+
+The core argument is patient data integrity. Healthcare records are among the most safety-critical data in existence. A patient's medication history, allergy list, or diagnostic records must be accurate and consistent at all times. MySQL's full ACID guarantees — Atomicity, Consistency, Isolation, Durability — ensure that a transaction updating a patient's records either completes entirely or not at all. If a doctor updates a diagnosis and the system crashes mid-write, ACID rollback ensures no partial, corrupted record is ever persisted. MongoDB, which follows BASE (Basically Available, Soft state, Eventually consistent), does not offer this guarantee by default. In a healthcare context, eventual consistency is not acceptable: a nurse reading a patient's drug allergy record cannot afford to see a stale "no known allergies" value due to a replication lag.
+
+The CAP theorem is also instructive here. MySQL, as a CP system, sacrifices availability to guarantee consistency. MongoDB as a CA/AP system favours availability and partition tolerance. For patient data — where incorrect reads carry real clinical risk — consistency must be the priority.
+
+MongoDB's schema flexibility is appealing for heterogeneous clinical forms (different departments capture different fields), but this benefit can be achieved in a relational schema using JSONB columns in PostgreSQL, which gives you the best of both worlds.
+
+**Would the answer change for a fraud detection module?** Yes, partially. Fraud detection typically involves analysing large volumes of event streams, computing statistical patterns, and running ML models in near real-time — workloads that are read-heavy, schema-free, and latency-sensitive. Here, a combination approach makes sense: MongoDB (or Apache Cassandra) for ingesting raw event logs at high write throughput, feeding into a feature store or time-series database, while keeping the core patient record system in MySQL. The two concerns — clinical record integrity and fraud analytics — have fundamentally different consistency requirements and should use different storage systems.

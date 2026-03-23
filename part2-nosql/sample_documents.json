@@ -1,0 +1,102 @@
+[
+  {
+    "_id": "PROD_ELEC_001",
+    "category": "Electronics",
+    "product_name": "Sony WH-1000XM5 Wireless Headphones",
+    "brand": "Sony",
+    "sku": "SNY-WH1000XM5-BLK",
+    "price": 29990,
+    "currency": "INR",
+    "in_stock": true,
+    "stock_quantity": 45,
+    "specifications": {
+      "driver_size_mm": 30,
+      "frequency_response": "4Hz - 40000Hz",
+      "battery_life_hours": 30,
+      "charging_time_hours": 3.5,
+      "connectivity": ["Bluetooth 5.2", "3.5mm Jack", "USB-C"],
+      "noise_cancellation": true,
+      "voltage": "5V DC",
+      "weight_grams": 250
+    },
+    "warranty": {
+      "duration_months": 12,
+      "type": "Manufacturer",
+      "covers": ["Manufacturing defects", "Hardware failure"]
+    },
+    "ratings": {
+      "average": 4.7,
+      "total_reviews": 1283
+    },
+    "tags": ["wireless", "noise-cancelling", "over-ear", "premium"],
+    "added_date": "2023-06-15"
+  },
+  {
+    "_id": "PROD_CLTH_001",
+    "category": "Clothing",
+    "product_name": "Men's Slim Fit Formal Shirt",
+    "brand": "Arrow",
+    "sku": "ARW-SHIRT-BLU-L",
+    "price": 1299,
+    "currency": "INR",
+    "in_stock": true,
+    "stock_quantity": 120,
+    "specifications": {
+      "fabric": "60% Cotton, 40% Polyester",
+      "fit_type": "Slim Fit",
+      "collar_type": "Spread Collar",
+      "sleeve": "Full Sleeve",
+      "care_instructions": ["Machine wash cold", "Do not bleach", "Tumble dry low", "Iron on medium heat"],
+      "occasion": ["Formal", "Business Casual"]
+    },
+    "sizes_available": [
+      {"size": "S", "chest_cm": 96, "stock": 25},
+      {"size": "M", "chest_cm": 101, "stock": 40},
+      {"size": "L", "chest_cm": 106, "stock": 35},
+      {"size": "XL", "chest_cm": 111, "stock": 20}
+    ],
+    "colors_available": ["Light Blue", "White", "Grey", "Navy"],
+    "ratings": {
+      "average": 4.3,
+      "total_reviews": 567
+    },
+    "tags": ["formal", "slim-fit", "cotton-blend", "office-wear"],
+    "added_date": "2023-08-01"
+  },
+  {
+    "_id": "PROD_GROC_001",
+    "category": "Groceries",
+    "product_name": "Aashirvaad Atta Whole Wheat Flour 10kg",
+    "brand": "Aashirvaad",
+    "sku": "AASH-ATTA-10KG",
+    "price": 380,
+    "currency": "INR",
+    "in_stock": true,
+    "stock_quantity": 300,
+    "specifications": {
+      "weight_kg": 10,
+      "grain_type": "Whole Wheat",
+      "packaging": "Sealed Plastic Bag",
+      "storage": "Store in cool, dry place away from moisture",
+      "shelf_life_months": 6
+    },
+    "expiry_date": "2024-08-31",
+    "manufactured_date": "2024-02-15",
+    "nutritional_info_per_100g": {
+      "calories_kcal": 341,
+      "protein_g": 11.8,
+      "carbohydrates_g": 69.4,
+      "dietary_fiber_g": 1.9,
+      "fat_g": 1.7,
+      "sodium_mg": 2
+    },
+    "certifications": ["FSSAI Approved", "ISO 22000", "Non-GMO"],
+    "allergens": ["Contains Gluten"],
+    "ratings": {
+      "average": 4.5,
+      "total_reviews": 4201
+    },
+    "tags": ["whole-wheat", "atta", "staple", "bulk-pack"],
+    "added_date": "2024-02-20"
+  }
+]
